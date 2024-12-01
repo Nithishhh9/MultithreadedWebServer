@@ -28,6 +28,8 @@ public class Client {
         Client singleThreadedWebServer_Client = new Client();
         try{
             singleThreadedWebServer_Client.run();
-       
+        } catch(Exception ex){
+            ex.printStackTrace();
+        }
     }
 }
