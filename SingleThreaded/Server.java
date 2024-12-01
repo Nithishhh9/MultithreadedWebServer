@@ -15,7 +15,9 @@ public class Server {
         socket.setSoTimeout(20000);
         while(true){
             System.out.println("Server is listening on port: "+port);
-            
+            Socket acceptedConnection = socket.accept();
+            System.out.println("Connected to "+acceptedConnection.getRemoteSocketAddress());
+            PrintWriter toClient = new PrintWriter(acceptedConnection.getOutputStream(), true);
             BufferedReader fromClient = new BufferedReader(new InputStreamReader(acceptedConnection.getInputStream()));
             toClient.println("Hello World from the server");
         }
