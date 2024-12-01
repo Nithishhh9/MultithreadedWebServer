@@ -20,8 +20,8 @@ public class Client {
                     InetAddress address = InetAddress.getByName("localhost");
                     Socket socket = new Socket(address, port);
                     try (
-                        PrintWriter toSocket = PrintWriter(socket.getOutputStream(), true);
-                        BufferedReader fromSocket = BufferedReader(new InputStreamReader(socket.getInputStream()))
+                        PrintWriter toSocket = new PrintWriter(socket.getOutputStream(), true);
+                        BufferedReader fromSocket = new BufferedReader(new InputStreamReader(socket.getInputStream()))
                     ) {
                         toSocket.println("Hello from Client " + socket.getLocalSocketAddress());
                         String line = fromSocket.readLine();
