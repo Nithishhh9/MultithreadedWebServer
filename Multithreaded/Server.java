@@ -16,8 +16,8 @@ public class Server {
         };
     }
     
-    public static void main(String[] args) {
-        int port = 8010;
+    public static void main(String[] args) throws Exception{
+        int port = 9865;
         Server server = new Server();
         
         try {

@@ -15,7 +15,7 @@ public class Client {
         return new Runnable() {
             @Override
             public void run() {
-                int port = 8010;
+                int port = 9865;
                 try {
                     InetAddress address = InetAddress.getByName("localhost");
                     Socket socket = new Socket(address, port);
@@ -29,7 +29,7 @@ public class Client {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                    // The socket will be closed automatically when leaving the try-with-resources block
+                    
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -38,7 +38,7 @@ public class Client {
         };
     }
     
-    public static void main(String[] args){
+    public static void main(String[] args) throws Exception{
         Client client = new Client();
         for(int i=0; i<100; i++){
             try{
