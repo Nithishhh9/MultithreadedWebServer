@@ -1,4 +1,4 @@
-package MultithreadedWebServer.Multithreaded;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
@@ -17,7 +17,7 @@ public class Server {
     }
     
     public static void main(String[] args) throws Exception{
-        int port = 9865;
+        int port = 8010;
         Server server = new Server();
         
         try {

@@ -1,4 +1,4 @@
-package MultithreadedWebServer.SingleThreaded;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -20,6 +20,9 @@ public class Server {
             PrintWriter toClient = new PrintWriter(acceptedConnection.getOutputStream(), true);
             BufferedReader fromClient = new BufferedReader(new InputStreamReader(acceptedConnection.getInputStream()));
             toClient.println("Hello World from the server");
+            toClient.close();
+            fromClient.close();
+            acceptedConnection.close();
         }
     }
 

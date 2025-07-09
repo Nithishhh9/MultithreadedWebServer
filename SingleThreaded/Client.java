@@ -1,7 +1,6 @@
-package MultithreadedWebServer.SingleThreaded;
+
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
@@ -12,13 +11,14 @@ import java.net.UnknownHostException;
 public class Client {
     
     public void run() throws UnknownHostException, IOException{
-        int port = 8090;
+        int port = 8010;
         InetAddress address = InetAddress.getByName("localhost");
         Socket socket = new Socket(address, port);
         PrintWriter toSocket = new PrintWriter(socket.getOutputStream(), true);
         BufferedReader fromSocket = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-        toSocket.println("Hello World from socket "+socket.getLocalSocketAddress());
+        toSocket.println("Hello World from socket ");
         String line = fromSocket.readLine();
+        System.out.println("Response from the line is "+line);
         toSocket.close();
         fromSocket.close();
         socket.close();

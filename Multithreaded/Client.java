@@ -1,5 +1,3 @@
-package MultithreadedWebServer.Multithreaded;
-
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,7 +13,7 @@ public class Client {
         return new Runnable() {
             @Override
             public void run() {
-                int port = 9865;
+                int port = 8010;
                 try {
                     InetAddress address = InetAddress.getByName("localhost");
                     Socket socket = new Socket(address, port);
