@@ -20,28 +20,28 @@ Easy to extend for additional functionality or protocol changes*
 ## *Architecture*
 
 
-+---------------------------+
+                                  +------------------+
+                                  |  ServerSocket    | Listens on port 8010
+                                  +--------+---------+
+                                           |
+                             +-------------+-------------+
+                             |                           |
+               +-------------+-------------+ +-----------+-------------+
+               | Thread 1 (Client handler) | | Thread 2 (Client handler)| ...
+               | Handles clientSocket1     | | Handles clientSocket2    | ...
+               +-------------+-------------+ +------------+------------+
+                             |                              |
+              Sends greeting response to Client 1     Sends greeting response to Client 2
 
++-------------------+       +---------------------------------------+
+| Client Thread 1   |       | Server Thread 1                       |
+| - Connects to srv | <---->| - Sends greeting                     |
+| - Sends message   |       | - Closes connection                  |
+| - Receives resp   |       +---------------------------------------+
++-------------------+
 
+... similarly for other client threads (up to 100)
 
-|   Multithreaded Clients     |  ←  100+ client threads run in parallel
-
-
-
-+---------------------------+
-
-             |
-             |     TCP Socket Connections
-             v
-             
-+---------------------------+
-
-
-|    Multithreaded Server    |  ←  New thread created for each client
-
-
-
-+---------------------------+
 
 
 ### *Server:*
