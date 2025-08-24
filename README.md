@@ -17,7 +17,8 @@ Learn the basics of socket-based network programming in Java.
 Clean, readable Java code—great for beginners and educational use
 Easy to extend for additional functionality or protocol changes*
 
-##*Architecture*
+## *Architecture*
+
 +---------------------------+
 |   Multithreaded Clients   |  ← 100+ client threads run in parallel
 +---------------------------+
@@ -35,18 +36,18 @@ Listens on port 8010
 Accepts incoming client connections
 Spawns a new thread to handle each client
 
-###*Clients:*
+### *Clients:*
 Spawns 100 independent client threads
 Each thread establishes a separate TCP session with the server
 Sends a greeting and prints the server’s response
 
 
-##*Installation*
+## *Installation*
 Clone the repository:
 
 bash
-git clone https://github.com/yourusername/multithreaded-java-webserver.git
-cd multithreaded-java-webserver
+git clone https://github.com/nithishhh9/MultithreadedWebServer.git
+cd MultithreadedWebServer
 Running the Server
 Compile and start the server:
 
@@ -77,19 +78,6 @@ Sends a single greeting line
 Receives and prints the server response
 
 Closes the connection
-
-##*Project Structure*
-text
-.
-├── Server.java                   # Multithreaded server code
-├── Client.java                   # Multithreaded client code
-├── multithreaded_webserver.png   # Project architecture diagram
-└── README.md                     # This documentation
-
-
-Server port:
-Change the port variable in both Server.java and Client.java.
-
 
 
 ##*License*
