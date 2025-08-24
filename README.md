@@ -12,12 +12,12 @@ Build a server that handles multiple clients simultaneously using threads.
 Write a client that spawns 100 concurrent connections.
 Learn the basics of socket-based network programming in Java.
 
-*##Features*
+## *Features*
 *Handles multiple concurrent clients via thread-per-connection architecture
 Clean, readable Java code—great for beginners and educational use
 Easy to extend for additional functionality or protocol changes*
 
-##Architecture
+##*Architecture*
 +---------------------------+
 |   Multithreaded Clients   |  ← 100+ client threads run in parallel
 +---------------------------+
@@ -29,20 +29,19 @@ Easy to extend for additional functionality or protocol changes*
 +---------------------------+
 
 
-*###Server:*
+### *Server:*
 
 Listens on port 8010
 Accepts incoming client connections
 Spawns a new thread to handle each client
 
-*###Clients:*
+###*Clients:*
 Spawns 100 independent client threads
 Each thread establishes a separate TCP session with the server
 Sends a greeting and prints the server’s response
 
 
-
-*##Installation*
+##*Installation*
 Clone the repository:
 
 bash
@@ -64,7 +63,7 @@ javac Client.java
 java Client
 This will spawn 100 client threads, each connecting to the server, sending a message, and printing the received response.
 
-*##How it Works*
+## *How it Works*
 Server:
 Uses ServerSocket to listen for incoming connections. When a new connection is accepted, it spawns a new thread using the Thread class, passing a lambda that prints a message back to the client and then closes the connection.
 
@@ -79,7 +78,7 @@ Receives and prints the server response
 
 Closes the connection
 
-*##Project Structure*
+##*Project Structure*
 text
 .
 ├── Server.java                   # Multithreaded server code
@@ -93,5 +92,5 @@ Change the port variable in both Server.java and Client.java.
 
 
 
-*##License*
+##*License*
 This project is licensed under the MIT License.
