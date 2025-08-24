@@ -19,6 +19,7 @@ Easy to extend for additional functionality or protocol changes*
 
 ## *Architecture*
 
+
 +---------------------------+
 |   Multithreaded Clients   |  ← 100+ client threads run in parallel
 +---------------------------+
@@ -80,5 +81,3 @@ Receives and prints the server response
 Closes the connection
 
 
-##*License*
-This project is licensed under the MIT License.
