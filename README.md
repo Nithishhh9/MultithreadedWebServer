@@ -21,9 +21,9 @@ Easy to extend for additional functionality or protocol changes*
 
 
 +---------------------------+
-
-|   Multithreaded Clients   |  ← 100+ client threads run in parallel
-
+|                             |
+|   Multithreaded Clients     |  ←  100+ client threads run in parallel
+|                             |
 +---------------------------+
 
              |
@@ -31,9 +31,9 @@ Easy to extend for additional functionality or protocol changes*
              v
              
 +---------------------------+
-
-|    Multithreaded Server   |  ← New thread created for each client
-
+|                            |
+|    Multithreaded Server    |  ←  New thread created for each client
+|                            |
 +---------------------------+
 
 
