@@ -1,4 +1,4 @@
-**# MultithreadedWebServer**
+# **MultithreadedWebServer**
  
 **A simple multithreaded client-server application built in Java.**
 
@@ -6,7 +6,7 @@ It demonstrates TCP socket programming, concurrent client handling using threads
 
 
 
-*## Overview*
+## *Overview*
 This project shows how to:
 Build a server that handles multiple clients simultaneously using threads.
 Write a client that spawns 100 concurrent connections.
